@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="diseno.css" rel="stylesheet" type="text/css">
+<title>TA-TE-TI</title>
+</head>
+<body>
+<div id = "b1">
+<h1 id = '01'>TA-TE-TI</h1>
+<h1 id = '01'>Ingresar el nombre de los dos jugadores junto con que simbolo utilizara.</h1>
+<form onsubmit="submitForm(event)">
+<input id ="J1" type="text" placeholder = "Nombre Jugador 1" required/> 
+<select id="S1" required> 
+    <option value="X">X
+    <option value="O" selected>O
+</select><br>
+<input id = "J2" type="text" placeholder = "Nombre Jugador 2" required/>
+<select id="S2" required> 
+    <option value="X">X
+    <option value="O" selected>O
+</select> <br>
+<input id="Datos" class = "boton2" type="submit" value="Iniciar Juego" onclick="guardarJugadores();" />
+</form>
+</div>
+<div id = "b2">
+<h1>Es el turno de</h1>
+<h1 id = "turno"></h1>
+    <table class = "calculadora" style = "align-items:center;" border = "1">
+    
+    <tbody>
+            
+            <td><input id="6" class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+            <input id="7"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+            <input id="8"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
+        </tr>
+        <tr>
+            <td><input id="3"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="4"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="5"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
+        </tr>
+        <tr>
+            <td><input id="0"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="1"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="2"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/></td>
+        </tr>
+    </tbody>
+</table>
+<input id="Datos" class = "boton2" type="button" value="Terminar Juego" onclick="empezarNuevo();"/>
+<!--<input id="Datos" class = "boton2" type="button" value="Siguiente turno" onclick="cambiarTurno();"/>-->
+</div>
+</body>
+<script type="text/javascript" src="tateti.js" async></script> 
+</html>
