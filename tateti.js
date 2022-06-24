@@ -52,16 +52,19 @@ function cambiarTurno(){
     aux = document.getElementById("turno")
     aux.innerHTML = jugador[turno] 
 }
-
 async function marcarCasilla(id){
+    await marcarCasilla2(id)
+    await finJuego()
+
+}
+
+async function marcarCasilla2(id){
     var aux = document.getElementById(id)
     if(casillas[parseInt(id)] == " "){
         casillas[parseInt(id)] =  sim[turno]
         aux.value = sim[turno]
         cambiarTurno()
     }
-
-    await finJuego()
     
 }
 
@@ -72,7 +75,8 @@ async function finJuego(){
             if( casillas[i] == casillas[i+1] && casillas[i+2] == casillas[i+1]){
                 alert("El ganador es :" + jugador[turno]) 
                 return
-            }else if(casillas[i] == casillas[i+3] && casillas[i+6] == casillas[i+3]){
+            }
+            if(casillas[i] == casillas[i+3] && casillas[i+6] == casillas[i+3]){
                 alert("El ganador es :" + jugador[turno])
                 return
             }
@@ -82,7 +86,8 @@ async function finJuego(){
         if(casillas[0] == casillas[4] && casillas[4] == casillas[8]){
             alert("El ganador es :" + jugador[turno])
             return
-        }else if(casillas[2] == casillas[4] && casillas[4] == casillas[6]){
+        }
+        if(casillas[2] == casillas[4] && casillas[4] == casillas[6]){
             alert("El ganador es :" + jugador[turno])
             return
         }
