@@ -30,6 +30,7 @@ function empezarNuevo(){
     for( let j = 0 ; j < 9; j++){
         aux = document.getElementById(j)
         aux.value = " " 
+        aux.disabled =  false
     }
     cambiarVentana()
 }
