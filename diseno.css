@@ -1,9 +1,11 @@
 .boton{
     text-decoration: none;
-    padding:15px;
+    padding:15px; 
+    margin-bottom:5px;
     font-weight: 600;
-    font-size: 20px;
-    width: 50px;
+    font-size: 50px;
+    width: 100px;
+    height: 120px;
     color: #ffffff;
     background-color: #1883ba;
     border-radius: 6px;
@@ -16,6 +18,7 @@
 .boton2{
     text-decoration: none;
     padding:15px;
+    margin-left: 45%;
     font-weight: 600;
     font-size: 20px;
     color: #ffffff;
@@ -39,7 +42,6 @@
 
   .calculadora{
     text-decoration: none;
-
     font-weight: 600;
     font-size: 20px;
     color: #ffffff;
@@ -48,4 +50,41 @@
     background-color: #c3f1e8;
     border-radius: 6px;
     border: 4px solid #000000;
+    }
+
+  .h2{
+    color: rgb(8, 130, 182);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+}
+.entrada{
+    text-decoration: none;
+    margin-left: 30%;
+    padding: 10px;
+    font-weight: 500;
+    width: 600px;
+    font-size: 20px;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 6px solid #000000;
+  }
+  .form-select{
+    text-decoration: none;
+    margin-left: 30%;
+    font-weight: 500;
+    width: 75px;
+    font-size: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 6px solid #000000;
+  }
+
+  #row1{
+    margin-left: 39%;
   }

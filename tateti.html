@@ -3,53 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link href="diseno.css" rel="stylesheet" type="text/css">
 <title>TA-TE-TI</title>
 </head>
-<body>
-<div id = "b1">
-<h1 id = '01'>TA-TE-TI</h1>
-<h1 id = '01'>Ingresar el nombre de los dos jugadores junto con que simbolo utilizara.</h1>
-<form onsubmit="submitForm(event)">
-<input id ="J1" type="text" placeholder = "Nombre Jugador 1" required/> 
-<select id="S1" required> 
-    <option value="X">X
-    <option value="O" selected>O
-</select><br>
-<input id = "J2" type="text" placeholder = "Nombre Jugador 2" required/>
-<select id="S2" required> 
-    <option value="X">X
-    <option value="O" selected>O
-</select> <br>
-<input id="Datos" class = "boton2" type="submit" value="Iniciar Juego" onclick="guardarJugadores();" />
-</form>
-</div>
-<div id = "b2">
-<h1>Es el turno de</h1>
-<h1 id = "turno"></h1>
-    <table class = "calculadora" style = "align-items:center;" border = "1">
-    
-    <tbody>
-            
-            <td><input id="6" class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
-            <input id="7"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
-            <input id="8"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
-        </tr>
-        <tr>
-            <td><input id="3"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+<body style="background-color: #42aca1;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <div id = "b1">
+        <h1 class="h2" >TA-TE-TI</h1>
+        <h1 class="h2" >Ingresar el nombre de los dos jugadores junto con que simbolo utilizara.</h1>
+        <form onsubmit="submitForm(event)">
+        <div class = "row">
+            <div class = "colspan">
+                <input id ="J1" class="entrada" type="text" placeholder = "Nombre Jugador 1" required>
+                <select id="S1" class="form-select" aria-label="Default select example" required> 
+                    <option value="X"selected>X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "colspan">
+                <input id ="J2" class="entrada" type="text" placeholder = "Nombre Jugador 2" required>
+                <select id="S2" class="form-select" aria-label="Default select example" required> 
+                    <option value="X">X</option>
+                    <option value="O" selected>O</option>
+                </select>
+            </div>
+        </div>
+        <input id="Datos" class = "boton2" type="submit" value="Iniciar Juego" onclick="guardarJugadores();" />
+        </form>
+    </div>
+    <div id="b2">
+        <div id = "row1" class = "row" >
+            <h1 class = "h2">Es el turno de</h1>
+            <h1 id = "turno" class = "h2"></h1>
+            <div class = "colspan" >
+                <input id="6" class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="7"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+                <input id="8"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
+            </div>
+            <div class = "colspan" >
+                <input id="3"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
                 <input id="4"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
                 <input id="5"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
-        </tr>
-        <tr>
-            <td><input id="0"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
+            </div>
+            <div class = "colspan" >
+                <input id="0"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
                 <input id="1"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);" /> 
-                <input id="2"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/></td>
-        </tr>
-    </tbody>
-</table>
-<input id="Datos" class = "boton2" type="button" value="Terminar Juego" onclick="empezarNuevo();"/>
-<!--<input id="Datos" class = "boton2" type="button" value="Siguiente turno" onclick="cambiarTurno();"/>-->
-</div>
+                <input id="2"  class = "boton" type="button" value=" " onclick="marcarCasilla(this.id);"/>
+            </div>
+        </div>
+        <input id="Datos" class = "boton2" type="button" value="Terminar Juego" onclick="empezarNuevo();"/>
+    </div>
 </body>
 <script type="text/javascript" src="tateti.js" async></script> 
 </html>

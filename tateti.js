@@ -16,6 +16,15 @@ function cambiarVentana(){
     aux1.id = "b2"
     aux2.id = "b1"
 }
+
+function terminar(){
+    for( let j = 0 ; j < 9; j++){
+        aux = document.getElementById(j)
+        aux.disabled =  true
+    }
+}
+
+
 function empezarNuevo(){
     casillas = new Array(" "," "," "," "," "," "," "," "," ")
     for( let j = 0 ; j < 9; j++){
@@ -55,7 +64,7 @@ function cambiarTurno(){
 async function marcarCasilla(id){
     await marcarCasilla2(id)
     await finJuego()
-
+    cambiarTurno()
 }
 
 async function marcarCasilla2(id){
@@ -63,7 +72,6 @@ async function marcarCasilla2(id){
     if(casillas[parseInt(id)] == " "){
         casillas[parseInt(id)] =  sim[turno]
         aux.value = sim[turno]
-        cambiarTurno()
     }
     
 }
@@ -74,21 +82,30 @@ async function finJuego(){
         if(casillas[i] != " "){
             if( casillas[i] == casillas[i+1] && casillas[i+2] == casillas[i+1]){
                 alert("El ganador es :" + jugador[turno]) 
+                terminar()
                 return
-            }
+            } 
+        }
+    }
+    for(let i = 0 ; i < 3; i++){
+        if(casillas[i] != " "){
             if(casillas[i] == casillas[i+3] && casillas[i+6] == casillas[i+3]){
                 alert("El ganador es :" + jugador[turno])
+                terminar()
                 return
             }
         }
     }
+
     if(casillas[4] != " "){
         if(casillas[0] == casillas[4] && casillas[4] == casillas[8]){
             alert("El ganador es :" + jugador[turno])
+            terminar()
             return
         }
         if(casillas[2] == casillas[4] && casillas[4] == casillas[6]){
             alert("El ganador es :" + jugador[turno])
+            terminar()
             return
         }
     }
@@ -98,7 +115,9 @@ async function finJuego(){
         if(casillas[j] != " " )
             cont++
     }
-    if(cont == j)
+    if(cont == j){
         alert("Termino en empate")
+        terminar()
+    }
 
 }
